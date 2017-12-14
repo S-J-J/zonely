@@ -9,23 +9,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var station = [{
   name: 'Victoria',
   line: 'Victoria',
+  zone: 'Zone 1',
   twitter: 'dancounsell'
 }, {
-  first: 'Charlotte',
-  last: 'White',
-  twitter: 'mtnmissy'
-}, {
-  first: 'Chloe',
-  last: 'Jones',
-  twitter: 'ladylexy'
-}, {
-  first: 'Bob',
-  last: 'Jones',
-  twitter: 'ladylexy'
-}, {
-  first: 'Cooper',
-  last: 'King',
-  twitter: 'steveodom'
+  name: 'Elephant & Castle',
+  line: 'Northern',
+  zone: '1 & 2',
+  twitter: 'dancounsell'
 }];
 
 // https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters
@@ -48,13 +38,13 @@ function getSuggestions(value) {
 }
 
 function getSuggestionValue(suggestion) {
-  return suggestion.name + ' ' + suggestion.last;
+  return suggestion.name; + '' + suggestion.line;
 }
 
 function renderSuggestion(suggestion, _ref) {
   var query = _ref.query;
 
-  var suggestionText = suggestion.name + ' ' + suggestion.last;
+  var suggestionText = suggestion.name + ', ' + suggestion.zone + ', ' + suggestion.line;
   var matches = AutosuggestHighlightMatch(suggestionText, query);
   var parts = AutosuggestHighlightParse(suggestionText, matches);
 
