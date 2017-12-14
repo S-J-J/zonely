@@ -14,7 +14,17 @@ var station = [{
 }, {
   name: 'Elephant & Castle',
   line: 'Northern',
-  zone: '1 & 2',
+  zone: 'Zone 1 & 2',
+  twitter: 'dancounsell'
+}, {
+  name: 'Leytonstone',
+  line: 'Central',
+  zone: 'Zone 1',
+  twitter: 'dancounsell'
+}, {
+  name: 'Liverpool Street',
+  line: 'Central',
+  zone: 'Zone 1',
   twitter: 'dancounsell'
 }];
 
